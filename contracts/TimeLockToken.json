@@ -1,0 +1,640 @@
+{
+  "contractName": "TimeLockToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beneficiary",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "release",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "releaseTime",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "name": "_releaseTime",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.2+commit.1df8f40c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"beneficiary\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"release\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"releaseTime\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_token\",\"type\":\"address\"},{\"name\":\"_beneficiary\",\"type\":\"address\"},{\"name\":\"_releaseTime\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{\"beneficiary()\":{\"return\":\"the beneficiary of the tokens.\"},\"releaseTime()\":{\"return\":\"the time when the tokens are released.\"},\"token()\":{\"return\":\"the token being held.\"}}},\"userdoc\":{\"methods\":{\"release()\":{\"notice\":\"Transfers tokens held by timelock to beneficiary.\"}}}},\"settings\":{\"compilationTarget\":{\"/home/wich/Documents/work/bolt-project/contracts/TimeLockToken.sol\":\"TimeLockToken\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/wich/Documents/work/bolt-project/contracts/BoltToken.sol\":{\"keccak256\":\"0x9212520e8a3aec303332b381734d9c4f99603e6f61c3bdb8adbe96a9778d48d1\",\"urls\":[\"bzzr://fe5a553d2179b40f139b75ad5adcbca1565b92540d83bb8ff15b0c7ea650aee7\"]},\"/home/wich/Documents/work/bolt-project/contracts/TimeLockToken.sol\":{\"keccak256\":\"0x392b310ca9acd13fc7387eb4a57454266cfd6acb64f6cbaee3ef33b876511a0e\",\"urls\":[\"bzzr://3fb3ae104324e132c1c6aa1b048d8f07f4a4c5e5fd91cfe27fbd67d76440b7f1\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/access/Roles.sol\":{\"keccak256\":\"0x75481aaa988c5e9fbc91b4f695678806579c04e0ad56907978c1ca5c7e92a682\",\"urls\":[\"bzzr://da472135eb9268d863825ea26e227a9f8980c54bd32e0764d61711acca59fc89\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/access/roles/MinterRole.sol\":{\"keccak256\":\"0x317b01d5df6753f57244b354d0a23d5055b293f3fa22693c2ff7906cc988ce97\",\"urls\":[\"bzzr://d3f08352c241a34db9b244c5fb569c7ffb3dcd1a0aa288c855a4a70eddb9e2a3\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/math/SafeMath.sol\":{\"keccak256\":\"0xc2a200a877c4a9b2475c246c54ffecc69ffde3e11af83319c63c2dc5458bac80\",\"urls\":[\"bzzr://c8876e2c39b60f155d748d71d715c8f3903fae5a405ac599adcb6ad2f9a583f9\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/ownership/Ownable.sol\":{\"keccak256\":\"0xcb16adc00dcf0d75e0bdf94379f4d5a6d74dca7c74e4183b94e15721159f8a30\",\"urls\":[\"bzzr://b81e03f7203cd628cfed19255911a04a05e8670d248afb48a7b067dd03b4ff55\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0x3dceb7e4aa237a56111c13f77d7efadeceda7271d62bfac94ac79afab7c1f411\",\"urls\":[\"bzzr://2f34152a5bec385352002c31bc89f5e9935f628f1923ccea45c2281e0084a4db\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/ERC20Burnable.sol\":{\"keccak256\":\"0xcf6b3e804a9b1e3d6ca4a695524cbaa52cd26cc86978a2b99052ba1a5d25653f\",\"urls\":[\"bzzr://8f763f9e6a0cdf1b7f07be575b3d4011e18a672b1365e26634e03580761e6858\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/ERC20Detailed.sol\":{\"keccak256\":\"0xa60f7f7ce98ca2d75c8e02da982d3fe91176269fdab2589bbbb7cc65f2d7c9d3\",\"urls\":[\"bzzr://5edd2c9be304a1e8ed055e243daba5345f242008164f9a0565c33197b860323b\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/ERC20Mintable.sol\":{\"keccak256\":\"0xd7956aed5535d9563bef5482c6fc41894aed3352aab764b3397bbc33dc2de0ea\",\"urls\":[\"bzzr://77acda78fc09e0be0c1954db02a97bed0f211618be5153ad5aed0bc0cf13f778\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x59e7df16169a498cb8837963b2f5461d88e63bd1eb6c7d58b814d76b84ccbe61\",\"urls\":[\"bzzr://e572c9c4e02e37349702451bf3b5dcbbc86a19da5a51695b5b3e1bfe1e7825dc\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x7230c14d692aff375e4931d60ef73ac8a79c28b9e54c200a377b7dc613c81a78\",\"urls\":[\"bzzr://3538d7da02640c67ac909e84d90e799439f3b3195cf0de39fd173dacd5a98311\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/TokenTimelock.sol\":{\"keccak256\":\"0xc7a644b65da0e55e1f99916efc0771fac9d30cc541e48574a720793d5195546a\",\"urls\":[\"bzzr://46b01411213bfd888f64fa646614f02e46acf446ef356dd35cdd5a4e5e6add5c\"]},\"/home/wich/Documents/work/bolt-project/zeppelinContracts/utils/Address.sol\":{\"keccak256\":\"0xea16b9933153c647242ba50b3e494fb133063d49f1fa81823f35a8c28754142e\",\"urls\":[\"bzzr://aa2b2eb534149525e194341c01cadf666668a1b7d679a268d10e23570a7e26b1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516060806104e38339810180604052606081101561003057600080fd5b508051602082015160409092015190919082828242811161005057600080fd5b60008054600160a060020a03948516600160a060020a031991821617909155600180549390941692169190911790915560025550505061044e806100956000396000f3fe608060405234801561001057600080fd5b5060043610610068577c0100000000000000000000000000000000000000000000000000000000600035046338af3eed811461006d57806386d1a69f14610091578063b91d40011461009b578063fc0c546a146100b5575b600080fd5b6100756100bd565b60408051600160a060020a039092168252519081900360200190f35b6100996100cc565b005b6100a361024f565b60408051918252519081900360200190f35b610075610255565b600154600160a060020a031690565b60025442101561013d57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601e60248201527f6974277320746f6f20736f6f6e20746f2072656c6561736520636f696e730000604482015290519081900360640190fd5b60008054604080517f70a082310000000000000000000000000000000000000000000000000000000081523060048201529051600160a060020a03909216916370a0823191602480820192602092909190829003018186803b1580156101a257600080fd5b505afa1580156101b6573d6000803e3d6000fd5b505050506040513d60208110156101cc57600080fd5b5051905060008111610229576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806103f7602c913960400191505060405180910390fd5b60015460005461024c91600160a060020a0391821691168363ffffffff61026416565b50565b60025490565b600054600160a060020a031690565b60408051600160a060020a038416602482015260448082018490528251808303909101815260649091019091526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fa9059cbb000000000000000000000000000000000000000000000000000000001790526102e49084906102e9565b505050565b6102fb82600160a060020a03166103ee565b151561030657600080fd5b6000606083600160a060020a0316836040518082805190602001908083835b602083106103445780518252601f199092019160209182019101610325565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d80600081146103a6576040519150601f19603f3d011682016040523d82523d6000602084013e6103ab565b606091505b50915091508115156103bc57600080fd5b6000815111156103e8578080602001905160208110156103db57600080fd5b505115156103e857600080fd5b50505050565b6000903b119056fe616d6f756e74206f662072656c656173652073686f756c6420626520686967686572207468616e207a69726fa165627a7a72305820a4a9497651251e09b1e03395abf7894c6f351eba98e034856e31be6d29ffc4970029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b5060043610610068577c0100000000000000000000000000000000000000000000000000000000600035046338af3eed811461006d57806386d1a69f14610091578063b91d40011461009b578063fc0c546a146100b5575b600080fd5b6100756100bd565b60408051600160a060020a039092168252519081900360200190f35b6100996100cc565b005b6100a361024f565b60408051918252519081900360200190f35b610075610255565b600154600160a060020a031690565b60025442101561013d57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601e60248201527f6974277320746f6f20736f6f6e20746f2072656c6561736520636f696e730000604482015290519081900360640190fd5b60008054604080517f70a082310000000000000000000000000000000000000000000000000000000081523060048201529051600160a060020a03909216916370a0823191602480820192602092909190829003018186803b1580156101a257600080fd5b505afa1580156101b6573d6000803e3d6000fd5b505050506040513d60208110156101cc57600080fd5b5051905060008111610229576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806103f7602c913960400191505060405180910390fd5b60015460005461024c91600160a060020a0391821691168363ffffffff61026416565b50565b60025490565b600054600160a060020a031690565b60408051600160a060020a038416602482015260448082018490528251808303909101815260649091019091526020810180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fa9059cbb000000000000000000000000000000000000000000000000000000001790526102e49084906102e9565b505050565b6102fb82600160a060020a03166103ee565b151561030657600080fd5b6000606083600160a060020a0316836040518082805190602001908083835b602083106103445780518252601f199092019160209182019101610325565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d80600081146103a6576040519150601f19603f3d011682016040523d82523d6000602084013e6103ab565b606091505b50915091508115156103bc57600080fd5b6000815111156103e8578080602001905160208110156103db57600080fd5b505115156103e857600080fd5b50505050565b6000903b119056fe616d6f756e74206f662072656c656173652073686f756c6420626520686967686572207468616e207a69726fa165627a7a72305820a4a9497651251e09b1e03395abf7894c6f351eba98e034856e31be6d29ffc4970029",
+  "sourceMap": "122:245:3:-;;;173:192;8:9:-1;5:2;;;30:1;27;20:12;5:2;173:192:3;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;173:192:3;;;;;;;;;;;;;;;;;682:15:18;668:29;;660:38;;;;;;708:6;:14;;-1:-1:-1;;;;;708:14:18;;;-1:-1:-1;;;;;;708:14:18;;;;;;;;732:26;;;;;;;;;;;;;;;768:12;:26;-1:-1:-1;;;122:245:3;;;;;;",
+  "deployedSourceMap": "122:245:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;122:245:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1004:89:18;;;:::i;:::-;;;;-1:-1:-1;;;;;1004:89:18;;;;;;;;;;;;;;1345:358;;;:::i;:::-;;1169:89;;;:::i;:::-;;;;;;;;;;;;;;;;860:76;;;:::i;1004:89::-;1074:12;;-1:-1:-1;;;;;1074:12:18;1004:89;:::o;1345:358::-;1462:12;;1443:15;:31;;1435:74;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1520:14;1537:6;;:31;;;;;;1562:4;1537:31;;;;;;-1:-1:-1;;;;;1537:6:18;;;;:16;;:31;;;;;;;;;;;;;;;:6;:31;;;5:2:-1;;;;30:1;27;20:12;5:2;1537:31:18;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1537:31:18;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1537:31:18;;-1:-1:-1;1595:1:18;1586:10;;1578:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1675:12;;;1655:6;:41;;-1:-1:-1;;;;;1655:6:18;;;;1675:12;1689:6;1655:41;:19;:41;:::i;:::-;1345:358;:::o;1169:89::-;1239:12;;1169:89;:::o;860:76::-;898:6;923;-1:-1:-1;;;;;923:6:18;860:76;:::o;662:174:17:-;770:58;;;-1:-1:-1;;;;;770:58:17;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;770:58:17;;;;;;;;25:18:-1;;61:17;;770:58:17;182:15:-1;793:23:17;179:29:-1;160:49;;744:85:17;;763:5;;744:18;:85::i;:::-;662:174;;;:::o;2487:869::-;3030:27;3038:5;-1:-1:-1;;;;;3030:25:17;;:27::i;:::-;3022:36;;;;;;;;3129:12;3143:23;3178:5;-1:-1:-1;;;;;3170:19:17;3190:4;3170:25;;;;;;;;;;;;;36:153:-1;66:2;58:11;;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;3170:25:17;;;;;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;3128:67:17;;;;3213:7;3205:16;;;;;;;;3256:1;3236:10;:17;:21;3232:118;;;3319:10;3308:30;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3308:30:17;3300:39;;;;;;;;2487:869;;;;:::o;463:616:19:-;523:4;1026:20;;1064:8;;463:616::o",
+  "source": "pragma solidity >=0.5.0 <0.6.0;\n\nimport \"./BoltToken.sol\";\nimport \"../zeppelinContracts/token/ERC20/TokenTimelock.sol\";\n\n\ncontract TimeLockToken is TokenTimelock{\n\n    \n    constructor (\n     ERC20 _token,\n     address _beneficiary,\n     uint256 _releaseTime\n    )\n    TokenTimelock(\n     _token,\n     _beneficiary,\n     _releaseTime\n     )\n    public \n    {\n\n    }\n}",
+  "sourcePath": "/home/wich/Documents/work/bolt-project/contracts/TimeLockToken.sol",
+  "ast": {
+    "absolutePath": "/home/wich/Documents/work/bolt-project/contracts/TimeLockToken.sol",
+    "exportedSymbols": {
+      "TimeLockToken": [
+        433
+      ]
+    },
+    "id": 434,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 413,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:3"
+      },
+      {
+        "absolutePath": "/home/wich/Documents/work/bolt-project/contracts/BoltToken.sol",
+        "file": "./BoltToken.sol",
+        "id": 414,
+        "nodeType": "ImportDirective",
+        "scope": 434,
+        "sourceUnit": 67,
+        "src": "33:25:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/TokenTimelock.sol",
+        "file": "../zeppelinContracts/token/ERC20/TokenTimelock.sol",
+        "id": 415,
+        "nodeType": "ImportDirective",
+        "scope": 434,
+        "sourceUnit": 2283,
+        "src": "59:60:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 416,
+              "name": "TokenTimelock",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2282,
+              "src": "148:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TokenTimelock_$2282",
+                "typeString": "contract TokenTimelock"
+              }
+            },
+            "id": 417,
+            "nodeType": "InheritanceSpecifier",
+            "src": "148:13:3"
+          }
+        ],
+        "contractDependencies": [
+          2282
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 433,
+        "linearizedBaseContracts": [
+          433,
+          2282
+        ],
+        "name": "TimeLockToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 431,
+              "nodeType": "Block",
+              "src": "357:8:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 432,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 426,
+                    "name": "_token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 419,
+                    "src": "289:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$1780",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 427,
+                    "name": "_beneficiary",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 421,
+                    "src": "302:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 428,
+                    "name": "_releaseTime",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 423,
+                    "src": "321:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 429,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 425,
+                  "name": "TokenTimelock",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2282,
+                  "src": "269:13:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_TokenTimelock_$2282_$",
+                    "typeString": "type(contract TokenTimelock)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "269:71:3"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 419,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 432,
+                  "src": "192:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$1780",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 418,
+                    "name": "ERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1780,
+                    "src": "192:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$1780",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 421,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 432,
+                  "src": "211:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "211:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 423,
+                  "name": "_releaseTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 432,
+                  "src": "238:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 422,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:79:3"
+            },
+            "returnParameters": {
+              "id": 430,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "357:0:3"
+            },
+            "scope": 433,
+            "src": "173:192:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 434,
+        "src": "122:245:3"
+      }
+    ],
+    "src": "0:367:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/wich/Documents/work/bolt-project/contracts/TimeLockToken.sol",
+    "exportedSymbols": {
+      "TimeLockToken": [
+        433
+      ]
+    },
+    "id": 434,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 413,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:3"
+      },
+      {
+        "absolutePath": "/home/wich/Documents/work/bolt-project/contracts/BoltToken.sol",
+        "file": "./BoltToken.sol",
+        "id": 414,
+        "nodeType": "ImportDirective",
+        "scope": 434,
+        "sourceUnit": 67,
+        "src": "33:25:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/wich/Documents/work/bolt-project/zeppelinContracts/token/ERC20/TokenTimelock.sol",
+        "file": "../zeppelinContracts/token/ERC20/TokenTimelock.sol",
+        "id": 415,
+        "nodeType": "ImportDirective",
+        "scope": 434,
+        "sourceUnit": 2283,
+        "src": "59:60:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 416,
+              "name": "TokenTimelock",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2282,
+              "src": "148:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TokenTimelock_$2282",
+                "typeString": "contract TokenTimelock"
+              }
+            },
+            "id": 417,
+            "nodeType": "InheritanceSpecifier",
+            "src": "148:13:3"
+          }
+        ],
+        "contractDependencies": [
+          2282
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 433,
+        "linearizedBaseContracts": [
+          433,
+          2282
+        ],
+        "name": "TimeLockToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 431,
+              "nodeType": "Block",
+              "src": "357:8:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 432,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 426,
+                    "name": "_token",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 419,
+                    "src": "289:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$1780",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 427,
+                    "name": "_beneficiary",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 421,
+                    "src": "302:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 428,
+                    "name": "_releaseTime",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 423,
+                    "src": "321:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 429,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 425,
+                  "name": "TokenTimelock",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2282,
+                  "src": "269:13:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_TokenTimelock_$2282_$",
+                    "typeString": "type(contract TokenTimelock)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "269:71:3"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 419,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 432,
+                  "src": "192:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC20_$1780",
+                    "typeString": "contract ERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 418,
+                    "name": "ERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1780,
+                    "src": "192:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC20_$1780",
+                      "typeString": "contract ERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 421,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 432,
+                  "src": "211:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 420,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "211:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 423,
+                  "name": "_releaseTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 432,
+                  "src": "238:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 422,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:79:3"
+            },
+            "returnParameters": {
+              "id": 430,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "357:0:3"
+            },
+            "scope": 433,
+            "src": "173:192:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 434,
+        "src": "122:245:3"
+      }
+    ],
+    "src": "0:367:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.2+commit.1df8f40c.Emscripten.clang"
+  },
+  "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0x09B1F3c6e7560731D5400F2D889A2c0fEA73adE7",
+      "transactionHash": "0xbe22f60a118a8e1760b34e6394e34bb9166a22f43f0d5bf08beec9f72c2a2d2a"
+    }
+  },
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-11-29T22:52:59.936Z",
+  "devdoc": {
+    "methods": {
+      "beneficiary()": {
+        "return": "the beneficiary of the tokens."
+      },
+      "releaseTime()": {
+        "return": "the time when the tokens are released."
+      },
+      "token()": {
+        "return": "the token being held."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "release()": {
+        "notice": "Transfers tokens held by timelock to beneficiary."
+      }
+    }
+  }
+}
